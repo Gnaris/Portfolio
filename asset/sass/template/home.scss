@@ -1,0 +1,36 @@
+@import "./_theme/theme.scss";
+@import "./utils/utils.scss";
+
+.home-article{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 100%;
+    height:100vh;
+    color: white;
+    font-family: $roboto;
+    .container-presentation{
+        @include getFlex(column, center, flex-start);
+        gap: 25px;
+        padding : 12%;
+        h1{
+            &:nth-child(1)
+            {
+                font-size: 2.5em;
+                span{
+                    color: $second_color;
+                }
+            }
+            &:nth-child(2)
+            {
+                font-size: 2em;
+                .typing{
+                    color: $second_color;
+                }
+            }
+        }
+    }
+    .container-photo{
+        @include getFlex(column, center, flex-start);
+    }
+}
+

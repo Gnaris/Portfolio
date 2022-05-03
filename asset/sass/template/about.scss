@@ -1,0 +1,9 @@
+@import "./_theme/theme.scss";
+@import "./utils/utils.scss";
+
+.about-article{
+    background: $second_background;
+    h1{
+        color: white;
+    }
+}

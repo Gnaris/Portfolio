@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import "./template/_theme/theme.scss";
+@import "./template/utils/utils.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    @include getFlex(row, center, center);
+    position: relative;
+    @media screen and (max-width: 500px){
+        grid-template-columns : 100%;
+    }
+}
+
+//? Taille du scrollbar
+::-webkit-scrollbar{
+    width: 10px;
+}
+//? Couleur de fond
+::-webkit-scrollbar-track{
+    background: rgb(54, 54, 54);
+}
+//? ScrollBar
+::-webkit-scrollbar-thumb{
+    background: $second_color;
+    border-radius: 5px;
+}
+
+section{
+    position: relative;
+    width : 75vw;
+    height: 100vh;
+    background: $second_background;
+    z-index: 0;
+    overflow: hidden;
+    @media screen and (max-width: 768px) {
+       width: 100vw; 
+    }
+}
+
+.main-page{
+    animation: new_page 1s ease-in-out forwards;
+    overflow: auto;
+    background: $second_background;
+}
+
+@keyframes new_page {
+    0%{
+        position: absolute;
+        right: -100%;
+    }
+    100%{
+        right: 0;
+        position : relative;
+    }
+}
+
+@import "./template/header.scss";
+@import "./template/home.scss";
+@import "./template/about.scss";
