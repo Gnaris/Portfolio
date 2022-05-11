@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import "./template/_theme/theme.scss";
-@import "./template/utils/utils.scss";
 
 *{
     margin: 0;
@@ -9,10 +7,13 @@
 }
 
 body{
-    @include getFlex(row, center, center);
+    display : flex;
+    justify-content: center;
+    align-items: flex-start;
     position: relative;
-    @media screen and (max-width: 500px){
-        grid-template-columns : 100%;
+    background-color: $second_background;
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
     }
 }
 
@@ -32,33 +33,58 @@ body{
 
 section{
     position: relative;
-    width : 75vw;
+    width : 100vw;
     height: 100vh;
     background: $second_background;
     z-index: 0;
     overflow: hidden;
-    @media screen and (max-width: 768px) {
-       width: 100vw; 
+    @media screen and (max-width: 1000px) {
+       width: 95vw; 
     }
 }
 
-.main-page{
-    animation: new_page 1s ease-in-out forwards;
-    overflow: auto;
-    background: $second_background;
+section article{
+    position: absolute;
+    right: -500%;
+    width: 100%;
+    height: 100vh;
+    background : $second_background;
+    transition : 1s;
+    overflow : auto;
 }
 
-@keyframes new_page {
-    0%{
+.show{
+    position : relative;
+    right: 0%;
+}
+
+.title{
+    position: relative;
+    font-size: 2em;
+    padding-bottom: 25px;
+    white-space: nowrap;
+    color: $first_color;
+    &::before{
+        content: "";
         position: absolute;
-        right: -100%;
+        bottom: 10%;
+        width: 50%;
+        height: 5px;
+        background-color: $second_color;
     }
-    100%{
-        right: 0;
-        position : relative;
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: -10%;
+        width: 25%;
+        height: 5px;
+        background-color: $second_color;
     }
 }
 
 @import "./template/header.scss";
 @import "./template/home.scss";
 @import "./template/about.scss";
+@import "./template/project.scss";
+@import "./template/nav_bar.scss";
+@import "./template/veille.scss";

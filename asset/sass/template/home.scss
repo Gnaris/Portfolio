@@ -1,36 +1,131 @@
-@import "./_theme/theme.scss";
-@import "./utils/utils.scss";
-
-.home-article{
+.home{
     display: grid;
-    grid-template-columns: 60% 40%;
-    width: 100%;
-    height:100vh;
+    grid-template-columns: 50% 50%;
     color: white;
     font-family: $roboto;
-    .container-presentation{
-        @include getFlex(column, center, flex-start);
-        gap: 25px;
-        padding : 12%;
-        h1{
-            &:nth-child(1)
-            {
-                font-size: 2.5em;
-                span{
-                    color: $second_color;
-                }
-            }
-            &:nth-child(2)
-            {
-                font-size: 2em;
-                .typing{
-                    color: $second_color;
-                }
-            }
-        }
-    }
-    .container-photo{
-        @include getFlex(column, center, flex-start);
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
     }
 }
 
+.presentation-container{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2vw;
+    padding : 7%;
+}
+
+.presentation-container h1:nth-child(1){
+    font-size: 2.5em;
+    span{
+        white-space: nowrap;
+        color: $second_color;
+    }
+    @media screen and (max-width: 1000px) {
+        font-size: 4.5vw;
+    }
+    @media screen and (max-width: 1024px) and (min-width: 1024px){
+        font-size: 3vw
+    }
+}
+
+.presentation-container h1:nth-child(2){
+    font-size: 2em;
+    .typing{
+        color: $second_color;
+        position: relative;
+        white-space: nowrap;
+        &::after{
+            content: "";
+            position: absolute; 
+            right: -5px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: $second_color;
+            animation: blink_bar 1s infinite;
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        font-size: 4vw;
+    }
+    @media screen and (max-width: 1024px) and (min-width: 1024px){
+        font-size: 2vw
+    }
+}
+
+@keyframes blink_bar{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.presentation-container p{
+    font-size: 1.3em;
+    @media screen and (max-width: 1000px){
+        font-size: 3.5vw;
+    }
+    @media screen and (max-width: 1024px) and (min-width: 1024px){
+        font-size: 2vw
+    }
+}
+
+.presentation-container button{
+    font-family: $roboto;
+    padding : 25px;
+    background-color: $second_color;
+    font-size: 1.1em;
+    border : none;
+    border-radius : 50px;
+    margin-top : 3.5vw;
+    cursor: pointer;
+    @media screen and (max-width: 1000px){
+        padding: 4vw;
+        font-size: 4vw;
+    }
+}
+
+.photo-container{
+    display: flex;
+    flex-direction: columns;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo{
+    position: relative;
+    padding : 10%;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5vw;
+        height: 5vw;
+        border-top: 1vw solid $second_color;
+        border-left: 1vw solid $second_color;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 5vw;
+        height: 5vw;
+        border-bottom: 1vw solid $second_color;
+        border-right: 1vw solid $second_color;
+    }
+    img{
+        @media screen and (max-width: 1000px){
+            width : 30vw;
+        }
+
+        @media screen and (max-width: 1024px) and (min-width: 1024px){
+            width: 25vw;
+        }
+    }
+}

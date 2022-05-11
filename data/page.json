@@ -1,0 +1,76 @@
+{
+    "home" : 
+    {
+        "profile" : 
+        {
+            "text" : "Bonjour je m'appelle " , 
+            "name" : "Boris"
+        },
+        "job" : 
+        {
+            "text" : "web  ", 
+            "typing" : "rien"
+        },
+        "description" : "bla bla bla",
+        "button" : "appuie là",
+        "photo" : "./asset/img/Profile.png"
+    },
+
+    "about" : 
+    {
+        "title" : "À propos de moi",
+        "profile" : 
+        {
+            "text" : "fezfefzfze ",
+            "name" : "Goulag",
+            "description" : "fjzaeiofhef hi faizehj aiehzo aehoiozi hoaih oizaehffjzaeiofhef hi faizehj aiehzo aehoi ozi hoaih oizaehffjzaeiofhef hi faizehj aiehzo aehoi ozi hoaih oizaehffjzaeiofhef hi faizehj aiehzo aehoi ozi hoaih oizaehffjzaeiofhef hi faizehj aiehzo aehoi ozi hoaih oizaehffjzaeiofhef hi faizehj aiehzo aehoi ozi hoaih oizaehf"
+        },
+        "information1" :[
+            {"Date de naissance" : "10 juin 1998"},
+            {"Diplôme" : "Doctorat en biologie humaine"},
+            {"Ville" : "Inde"}
+        ],
+        "information2" :[
+            {"Âge" : "198 ans"},
+            {"Numéro de téléphone" : "+33 00 00 00 00"},
+            {"Mail" : "Pa2Mail@ray.com"}
+        ],
+        "cv" :
+        {
+            "show" : true,
+            "link" : ""
+        },
+        "skill" : [
+            {"name" : "Html", "percent" : "80%"},
+            {"name" : "Css", "percent" : "80%"},
+            {"name" : "Php", "percent" : "65%"},
+            {"name" : "Javascript", "percent" : "50%"},
+            {"name" : "C#", "percent" : "30%"},
+            {"name" : "Java", "percent" : "45%"}
+        ],
+
+        "education" : [
+            {"date" : "2010-2011", "title" : "Echec scolaire", "description" : "J'ai foutu le feu à l'école"},
+            {"date" : "2011-2012", "title" : "J'ai tué un élève", "description" : "Il est mort"},
+            {"date" : "2012-2013", "title" : "Vole", "description" : "J'ai volé un clavier"},
+            {"date" : "2013-2014", "title" : "Braquage", "description" : "J'ai braqué une banque"}
+        ],
+
+        "experience" : [
+            {"date" : "2013-2014", "title" : "Stage chez un pd", "description" : "Ce stage était très enrichissant"},
+            {"date" : "2014-2015", "title" : "Stage chez un pd", "description" : "Ce stage était très enrichissant"},
+            {"date" : "2015-2016", "title" : "Stage chez un pd", "description" : "Ce stage était très enrichissant"},
+            {"date" : "2016-2017", "title" : "Stage chez un pd", "description" : "Ce stage était très enrichissant"}
+        ]
+    },
+
+    "project" :
+    {
+        "title" : "Mes projets",
+        "content" : [
+            {"icon" : "<i class='uil uil-robot'></i>", "title" : "IA Robot", "description" : "C'est toi le robot", "git" : "https://github.com/Gnaris"},
+            {"icon" : "<i class='uil uil-monitor'></i>", "title" : "IDE", "description" : "Tg", "git" : "https://github.com/Gnaris"},
+            {"icon" : "<i class='uil uil-analysis'></i>", "title" : "La thune", "description" : "Tu connais la thune, bah j'ai pas", "git" : "https://github.com/Gnaris"}
+        ]
+    }
+}
